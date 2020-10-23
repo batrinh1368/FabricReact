@@ -1,0 +1,8 @@
+#preview {
+  display: flex;
+  justify-content: center;
+}
+
+#preview .canvas-container {
+  border: 1px solid rebeccapurple;
+}
