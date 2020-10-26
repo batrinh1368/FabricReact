@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import FrameDesign from "./image-editor/frame-design";
 import Preview from "./image-editor/preview";
 
 export default class App extends React.Component {
@@ -41,7 +42,7 @@ export default class App extends React.Component {
   }
 
   _updatePreview(){
-    this.preview.current.redrawCanvas(this.state.designs)
+    // this.preview.current.redrawCanvas(this.state.designs)
   }
 
   render() {
@@ -49,7 +50,8 @@ export default class App extends React.Component {
       <div className="App">
         <header className="App-header"></header>
 
-        <Preview designs={this.state.designs} ref={this.preview}></Preview>
+        {/* <Preview designs={this.state.designs} ref={this.preview}></Preview> */}
+        <FrameDesign designs={this.state.designs} ref={this.preview}></FrameDesign>
         <div>
           <button onClick={() => this.addText()}>Add Text</button>
           <button onClick={() => this.addImage()}>Add Image</button>
